@@ -425,7 +425,7 @@ if (nameStorage) {
 let musicPlay = () => {
   document.addEventListener('click', () => {
     audio.play()
-    audio.volume = 0.07;
+    audio.volume = 0.05;
   }, { once: true });
 };
 setTimeout(musicPlay, 1000);
@@ -435,7 +435,7 @@ toggleMusic.addEventListener('click', (event) => {
   if (audio.paused) {
     muteSpeaker.style.opacity = '0';
     audio.play().then(() => {
-      audio.volume = 0.07;
+      audio.volume = 0.05;
     }).catch(error => {
       console.error("Ошибка воспроизведения музыки:", error);
     });
