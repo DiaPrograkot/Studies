@@ -417,7 +417,7 @@ if (nameStorage) {
       startgameFunc();
     }
   });
-  }
+}
 
 // Управление музыкой
 let musicPlay = () => {
