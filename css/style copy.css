@@ -207,7 +207,7 @@ body {
 .laser {
   position: absolute;
   display: inline-block;
-  width: 30px;
+  width: 15px;
   height: 30px;
   -webkit-transition: top 1.4s linear;
   top: 130px;
@@ -447,7 +447,7 @@ body {
 }
 
 .star {
-  height: 4rem;
+  height: 6rem;
   margin-left: 0.5rem;
 }
 
