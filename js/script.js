@@ -400,28 +400,24 @@ let startgameFunc = () => {
   });
 };
 
-
-document.addEventListener('DOMContentLoaded', () => {
-// Проверка имени игрока и запуск игры
-showStars();
-let nameStorage = localStorage.getItem('name');
+showStars()
+let nameStorage = localStorage.getItem('name')
+console.log(nameStorage)
 if (nameStorage) {
-  playerLabel.textContent = nameStorage;
-  startgameFunc();
+  playerLabel.textContent = nameStorage
+  startgameFunc()
 } else {
-  playerNameContainer.style.display = 'flex';
+  playerNameContainer.style.display = 'flex'
   playerPlay.addEventListener('click', () => {
-    playerNameContainer.style.display = 'none';
-    playerName = playerInput.value;
+    playerName = playerInput.value
     if (playerName) {
-      localStorage.setItem('name', playerName);
-      playerLabel.textContent = playerName;
-      startgameFunc();
+      localStorage.setItem('name', playerName)
+      playerLabel.textContent = playerName
+      playerNameContainer.style.display = 'none'
+     startgameFunc()
     }
-  });
+  })
 }
-});
-
 
 // Управление музыкой
 let musicPlay = () => {
