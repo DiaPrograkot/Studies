@@ -417,7 +417,7 @@ if (nameStorage) {
       startgameFunc();
     }
   });
-}
+  }
 
 // Управление музыкой
 let musicPlay = () => {
@@ -455,8 +455,4 @@ document.addEventListener('keydown', (event) => {
     isPaused = !isPaused; // Переключение состояния паузы
     pauseButton.textContent = isPaused ? '▶' : '||';
   }
-});
-// Убедитесь, что нет обработчиков событий, которые могут блокировать ввод
-document.querySelector('.playerInput').addEventListener('keydown', event => {
-  console.log('Key pressed:', event.key); // Проверьте, что событие не блокируется
 });
