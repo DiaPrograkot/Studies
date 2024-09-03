@@ -456,3 +456,7 @@ document.addEventListener('keydown', (event) => {
     pauseButton.textContent = isPaused ? '▶' : '||';
   }
 });
+// Убедитесь, что нет обработчиков событий, которые могут блокировать ввод
+document.querySelector('.playerInput').addEventListener('keydown', event => {
+  console.log('Key pressed:', event.key); // Проверьте, что событие не блокируется
+});
