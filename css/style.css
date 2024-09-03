@@ -58,7 +58,7 @@ body {
   top: 100px;
   right: 50px;
   padding: 10px 20px;
-  background-color: #ffdd1a;
+  background-color: #db1818;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -128,25 +128,25 @@ body {
   left: 15px;
   width: 10px;
   height: 10px;
-  background: gold;
-  -webkit-box-shadow: 0px 0px 9px 4px gold;
-  box-shadow: 0px 0px 9px 4px gold;
+  background: #db1818;
+  -webkit-box-shadow: 0px 0px 9px 4px #db1818;
+  box-shadow: 0px 0px 9px 4px #db1818;
 }
 
 .orange {
   left: 10px;
   width: 20px;
   height: 20px;
-  background: orange;
-  -webkit-box-shadow: 0px 0px 9px 4px orange;
-  box-shadow: 0px 0px 9px 4px orange;
+  background: #db1818;
+  -webkit-box-shadow: 0px 0px 9px 4px #db1818;
+  box-shadow: 0px 0px 9px 4px #db1818;
 }
 
 .red {
   left: 5px;
   width: 30px;
   height: 30px;
-  background: OrangeRed;
+  background: #db1818;
   -webkit-box-shadow: 0px 0px 5px 4px #0025ff;
   box-shadow: 0px 0px 5px 4px #0025ff;
 }
@@ -248,7 +248,7 @@ body {
   position: absolute;
   display: inline-block;
   font-size: 7rem;
-  color: yellow;
+  color: #db1818;
   top: 20px;
   right: 58px;
 }
@@ -256,7 +256,7 @@ body {
   position: fixed;
   display: inline-block;
   font-size: 5rem;
-  color: yellow;
+  color: #db1818;
   bottom: 20px;
   right: 58px;
 }
@@ -294,7 +294,7 @@ body {
   display: inline-block;
   font-size: 2rem;
   font-weight: bold;
-  color: greenyellow;
+  color: #db1818;
   bottom: 20px;
   left: 100px;
   cursor: pointer;
@@ -341,7 +341,7 @@ body {
   z-index: 100;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  border: 20px solid yellow;
+  border: 20px solid #db1818;
   text-align: center;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -369,7 +369,7 @@ body {
   z-index: 100;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  border: 20px solid yellow;
+  border: 20px solid #db1818;
   text-align: center;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -377,17 +377,17 @@ body {
 
 .playerTitle {
   padding-top: 1rem;
-  color: yellow;
+  color: #db1818;
   font-size: 2rem;
   text-decoration: underline;
 }
 .startgame, .gameover:hover {
-  border: 20px solid rgb(255, 187, 0);
+  border: 20px solid #db1818(255, 187, 0);
 }
 
 .title {
   padding-top: 3rem;
-  color: yellow;
+  color: #db1818;
   font-size: 6rem;
   text-decoration: underline;
 }
@@ -492,7 +492,7 @@ body {
   .counter {
     display: inline-block;
     font-size: 5rem;
-    color: yellow;
+    color: #db1818;
     top: 10px;
     right: 40px;
   }
@@ -516,7 +516,7 @@ body {
     display: inline-block;
     font-size: 2rem;
     font-weight: bold;
-    color: greenyellow;
+    color: #db1818;
     bottom: 6px;
     left: 50px;
     cursor: pointer;
