@@ -67,7 +67,7 @@ body {
 
 .ship {
   position: absolute;
-  top: 6%;
+  top: 2%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -224,7 +224,7 @@ body {
   position: absolute;
   display: inline-block;
   width: 30px;
-  height: 30px;
+  height: 45px;
   -webkit-transition: top 1.4s linear;
   top: 145px;
   transition: top 1.4s linear;
@@ -348,7 +348,7 @@ body {
 }
 .startgame, .gameover {
   width: 80rem;
-  height: 70vh;
+  height: 60vh;
   background-color: rgba(255, 255, 0, 0.151);
   border-radius: 10px;
   position: absolute;
@@ -411,7 +411,7 @@ body {
 .startplay, .play {
   cursor: pointer;
   position: absolute;
-  top: 70%;
+  top: 60%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   color: rgba(190, 60, 60, 0.822);
@@ -446,7 +446,7 @@ body {
 
 .startgame, .gameover:hover .play {
   color: rgba(238, 14, 14, 0.863);
-  font-size: 12rem;
+  font-size: 11rem;
 }
 
 .lives {
@@ -552,69 +552,69 @@ body {
     width: 90%;
   }
 }
-.levelButtonEasy {
-  position: absolute;
-  top: 230px;
-  left: 150px;
-  padding: 15px 45px;
-  background-color: #ffdd1a;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
+
+
+.difficulty, .difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
-.levelButtonMedium {
-  position: absolute;
-  top: 230px;
-  right: 313.5px;
-  padding: 15px 40px;
-  background-color: #ffdd1a;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
+
+.difficulty button {
+  padding: 1.5rem 3rem; /* Увеличенные отступы */
+  font-size: 1.5rem; /* Увеличенный размер шрифта */
   cursor: pointer;
+  border: none;
+  border-radius: 10px; /* Более округлённые углы */
+  transition: background-color 0.3s;
+  min-width: 200px; /* Минимальная ширина кнопки */
+  min-height: 60px; /* Минимальная высота кнопки */
 }
-.levelButtonHard {
-  position: absolute;
-  top: 230px;
-  right: 150px;
-  padding: 15px 45px;
-  background-color: #ffdd1a;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
+
+.difficulty-buttons button {
+  padding: 1.5rem 3rem; /* Увеличенные отступы */
+  font-size: 1.5rem; /* Увеличенный размер шрифта */
   cursor: pointer;
+  border: none;
+  border-radius: 10px; /* Более округлённые углы */
+  transition: background-color 0.3s;
+  min-width: 200px; /* Минимальная ширина кнопки */
+  min-height: 60px; /* Минимальная высота кнопки */
 }
-.levelButtonEasyG {
-  position: absolute;
-  top: 230px;
-  left: 150px;
-  padding: 15px 45px;
-  background-color: #ffdd1a;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
+
+.difficulty .easy { background-color: #4CAF50; color: white; }
+.difficulty .medium { background-color: #FF9800; color: white; }
+.difficulty .hard { background-color: #F44336; color: white; }
+
+.difficulty-buttons .easy { background-color: #4CAF50; color: white; }
+.difficulty-buttons .medium { background-color: #FF9800; color: white; }
+.difficulty-buttons .hard { background-color: #F44336; color: white; }
+
+.difficulty button:hover {
+  background-color: #333;
+  color: white;
 }
-.levelButtonMediumG {
-  position: absolute;
-  top: 230px;
-  right: 313.5px;
-  padding: 15px 40px;
-  background-color: #ffdd1a;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
+
+.difficulty-buttons button:hover {
+  background-color: #333;
+  color: white;
 }
-.levelButtonHardG {
-  position: absolute;
-  top: 230px;
-  right: 150px;
-  padding: 15px 45px;
-  background-color: #ffdd1a;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
+
+.imageContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.imageContainer {
+  background-image: url('img/background12.jpg');
+  background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь контейнер */
+  background-position: center; /* Центрирует изображение в контейнере */
+  width: 100%; /* Устанавливает ширину контейнера */
+  height: 100vh; /* Устанавливает высоту контейнера на 100% от высоты экрана */
 }
