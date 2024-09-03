@@ -40,7 +40,7 @@ let showStars = () => {
   lives.innerHTML = '';
   for (let i = 0; i < stars; i++) {
     let star = document.createElement('img');
-    star.setAttribute('src', 'img/paw.png');
+    star.setAttribute('src', 'img/Арбузик-жизнь-removebg-preview.png');
     star.classList.add('star');
     lives.append(star);
   }
@@ -123,7 +123,7 @@ let laserMovement = laser => {
 let createLaser = (asteroidId) => {
   let laser = document.createElement('img');
   laser.classList.add('laser');
-  laser.setAttribute('src', 'img/bullet.svg');
+  laser.setAttribute('src', 'img/Лазер_косточка-removebg-preview.png');
   container.append(laser);
   laser.setAttribute('data-asteroid-id', asteroidId);
   laser.style.left = `${ship.offsetLeft + 46}px`;
@@ -176,15 +176,13 @@ let setAsteroidPosition = asteroid => {
 // Установка формы астероида
 let setAsteroidShape = asteroid => {
   let shapes = [
-    'img/asteroid-purple.svg',
-    'img/green-asteroid.svg',
-    'img/orange-meteorite.svg',
-    'img/asteroid-black.svg',
-    'img/rock.svg',
-    'img/meteorite-white.svg',
-    'img/lightorange-asteroid.svg',
-    'img/rocky-asteroid.svg',
-    'img/purple-asteroid.svg'
+    'img/Ребенок_1-removebg-preview.png',
+    'img/Ребенок_2-removebg-preview.png',
+    'img/Ребенок_3-removebg-preview.png',
+    'img/Ребенок_4-removebg-preview.png',
+    'img/Ребенок_5-removebg-preview.png',
+    'img/Ребенок_6-removebg-preview.png',
+    'img/Ребенок_7-removebg-preview.png'
   ];
   let size = Math.floor(Math.random() * 16) + 4;
   let shape = shapes[Math.floor(Math.random() * shapes.length)];

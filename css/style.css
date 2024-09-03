@@ -67,7 +67,7 @@ body {
 
 .ship {
   position: absolute;
-  top: 6%;
+  top: 2%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -224,7 +224,7 @@ body {
   position: absolute;
   display: inline-block;
   width: 30px;
-  height: 30px;
+  height: 45px;
   -webkit-transition: top 1.4s linear;
   top: 145px;
   transition: top 1.4s linear;
