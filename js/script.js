@@ -400,6 +400,8 @@ let startgameFunc = () => {
   });
 };
 
+
+document.addEventListener('DOMContentLoaded', () => {
 // Проверка имени игрока и запуск игры
 showStars();
 let nameStorage = localStorage.getItem('name');
@@ -418,6 +420,8 @@ if (nameStorage) {
     }
   });
 }
+});
+
 
 // Управление музыкой
 let musicPlay = () => {
