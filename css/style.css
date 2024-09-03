@@ -600,3 +600,21 @@ body {
   background-color: #333;
   color: white;
 }
+
+.imageContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.imageContainer {
+  background-image: url('img/background12.jpg');
+  background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь контейнер */
+  background-position: center; /* Центрирует изображение в контейнере */
+  width: 100%; /* Устанавливает ширину контейнера */
+  height: 100vh; /* Устанавливает высоту контейнера на 100% от высоты экрана */
+}

@@ -17,12 +17,9 @@ let muteSpeaker = toggleMusic.querySelector('.muteSpeaker');
 let musicButton = toggleMusic.querySelector('.musicButton');
 let play = document.querySelector('.play');
 let startplay = document.querySelector('.startplay');
-let earth = document.querySelector('.earthImg');
 let mars = document.querySelector('.marsImg');
 let space = document.querySelector('.spaceImg');
 let lives = document.querySelector('.lives');
-let videoContainer = document.querySelector('.videoContainer');
-let videoSource = videoContainer.querySelector('source');
 let star;
 
 let isPaused = false;
@@ -258,25 +255,6 @@ const moveShip = (clientX) => {
 
 document.addEventListener('mousemove', event => moveShip(event.clientX));
 ship.addEventListener('touchmove', event => moveShip(event.touches[0].clientX));
-
-// Изменение фона видео
-earth.addEventListener('click', (event) => {
-  event.stopPropagation()
-  videoSource.setAttribute('src', 'video/earth.mp4');
-  videoContainer.load();
-});
-
-mars.addEventListener('click', (event) => {
-  event.stopPropagation()
-  videoSource.setAttribute('src', 'video/mars.mp4');
-  videoContainer.load();
-});
-
-space.addEventListener('click', (event) => {
-  event.stopPropagation()
-  videoSource.setAttribute('src', 'video/galaxy.mp4');
-  videoContainer.load();
-});
 
 // Удаление звезд
 let removeStars = () => {
