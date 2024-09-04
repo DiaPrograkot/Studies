@@ -612,7 +612,7 @@ body {
 }
 
 .imageContainer {
-  background-image: url('img/background12.jpg');
+  background-image: url('img/background15.png');
   background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь контейнер */
   background-position: center; /* Центрирует изображение в контейнере */
   width: 100%; /* Устанавливает ширину контейнера */
