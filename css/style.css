@@ -64,14 +64,17 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-
+ 
+@keyframes magnetic-move {
+  0% { transform: translateX(-7px) rotate(-3deg); }
+  50% { transform: translateX(2px) rotate(1deg); }
+  100% { transform: translateX(-6px) rotate(-3deg); }
+}
 .ship {
+  animation: magnetic-move 2s infinite ease-in-out ;
   position: absolute;
   top: 2%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  transform: rotate(180deg);
   visibility: hidden;
 }
 
@@ -80,7 +83,7 @@ body {
   height: 12rem;
   position: relative;
   z-index: 100;
-  transform: rotate(180deg);
+  
 }
 
 .flameContainer {
@@ -88,8 +91,7 @@ body {
   z-index: 99;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translate(-34%, 110%) rotate(180deg);
-  transform: translate(-34%, 110%) rotate(180deg);
+ 
 }
 
 .fighterFlame {
@@ -223,14 +225,21 @@ body {
 .laser {
   position: absolute;
   display: inline-block;
-  width: 15px;
-  height: 30px;
+  width: 23px;
+  height: 18px;
   -webkit-transition: top 1.4s linear;
-  top: 145px;
+ 
   transition: top 1.4s linear;
-  transform: rotate(180deg);
-  /* transform: rotate(90deg); */
   visibility: hidden;
+}
+.laser-eye-left {
+  top: 80px; /* или другая позиция для левого глаза */
+  left: 25px; /* позиция для левого глаза относительно корабля */
+}
+
+.laser-eye-right {
+  top: 80px; /* или другая позиция для правого глаза */
+  left: 55px; /* позиция для правого глаза относительно корабля */
 }
 
 .asteroid {
@@ -613,9 +622,12 @@ body {
 }
 
 .imageContainer {
-  background-image: url('img/background12.jpg');
+  background-image: url('img/background26.png');
   background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь контейнер */
-  background-position: center; /* Центрирует изображение в контейнере */
+  background-position: cover; /* Центрирует изображение в контейнере */
   width: 100%; /* Устанавливает ширину контейнера */
   height: 100vh; /* Устанавливает высоту контейнера на 100% от высоты экрана */
+  position: fixed;
 }
+
+

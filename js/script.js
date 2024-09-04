@@ -50,6 +50,10 @@ let showStars = () => {
 let setCounter = () => {
   counter.textContent = parseInt(counter.textContent) + 1;
 };
+let sounds = [
+  'music/Shoot1.m4a',
+  'music/Shoot2.m4a'
+];
 
 // Воспроизведение звука лазера
 let laserSound = async () => {
@@ -57,12 +61,16 @@ let laserSound = async () => {
 
   isLaserPlaying = true;
   try {
-    if (!lasersound.paused) {
-      lasersound.pause();
-      lasersound.currentTime = 0;
+    // Выбираем случайный звук из массива
+    let randomSound = new Audio(sounds[Math.floor(Math.random() * sounds.length)]);
+    
+    if (!randomSound.paused) {
+      randomSound.pause();
+      randomSound.currentTime = 0;
     }
-    lasersound.volume = 0.1;
-    await lasersound.play();
+
+    randomSound.volume = 1;
+    await randomSound.play();
   } catch (error) {
     console.error("Ошибка воспроизведения лазера:", error);
   } finally {
@@ -118,22 +126,30 @@ let laserMovement = laser => {
   }, 50);
 };
 
-
 // Создание лазера
 let createLaser = (asteroidId) => {
   let laser = document.createElement('img');
   laser.classList.add('laser');
-  laser.setAttribute('src', 'img/Лазер_косточка-removebg-preview.png');
+  laser.setAttribute('src', 'img/drop-removebg-preview.png');
   container.append(laser);
   laser.setAttribute('data-asteroid-id', asteroidId);
-  laser.style.left = `${ship.offsetLeft + 46}px`;
+
+  // Рандомный выбор из какого глаза стрелять
+  if (Math.random() > 0.5) {
+    laser.classList.add('laser-eye-left');
+  } else {
+    laser.classList.add('laser-eye-right');
+  }
+
+  // Устанавливаем начальные координаты
+  laser.style.left = `${ship.offsetLeft + (Math.random() > 0.5 ? 25 : 55)}px`; // Смещение в зависимости от глаза
   laser.style.visibility = 'visible';
   laserMovement(laser);
 };
 
 // Обработка стрельбы
 let laserShot = () => {
-  if (canShoot & !isPaused) {
+  if (canShoot && !isPaused) {
     let asteroidId = document.querySelector('.asteroid')?.getAttribute('data-id');
     if (asteroidId) {
       createLaser(asteroidId);
@@ -144,6 +160,8 @@ let laserShot = () => {
     }
   }
 };
+
+
 
 let moveAsteroid = (asteroid) => {
   const animate = () => {
@@ -182,7 +200,12 @@ let setAsteroidShape = asteroid => {
     'img/Ребенок_4-removebg-preview.png',
     'img/Ребенок_5-removebg-preview.png',
     'img/Ребенок_6-removebg-preview.png',
-    'img/Ребенок_7-removebg-preview.png'
+    'img/Ребенок_7-removebg-preview.png',
+    'img/child1-fotor-bg-remover-202409052852.png',
+    'img/child2-fotor-bg-remover-202409052925.png',
+    'img/child3-fotor-bg-remover-2024090521143.png',
+    'img/child4-fotor-bg-remover-2024090521210.png',
+    'img/child5-fotor-bg-remover-2024090521220.png'
   ];
   let size = Math.floor(Math.random() * 16) + 4;
   let shape = shapes[Math.floor(Math.random() * shapes.length)];
@@ -423,7 +446,7 @@ if (nameStorage) {
 let musicPlay = () => {
   document.addEventListener('click', () => {
     audio.play()
-    audio.volume = 0.07;
+    audio.volume = 0.042;
   }, { once: true });
 };
 setTimeout(musicPlay, 1000);
@@ -433,7 +456,7 @@ toggleMusic.addEventListener('click', (event) => {
   if (audio.paused) {
     muteSpeaker.style.opacity = '0';
     audio.play().then(() => {
-      audio.volume = 0.07;
+      audio.volume = 0.042;
     }).catch(error => {
       console.error("Ошибка воспроизведения музыки:", error);
     });
