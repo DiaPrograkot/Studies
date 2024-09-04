@@ -622,11 +622,7 @@ body {
 }
 
 .imageContainer {
-<<<<<<< HEAD
   background-image: url('img/background26.png');
-=======
-  background-image: url('img/background16.jpg');
->>>>>>> 206763bbd34dd433ca1d6761db703e60227b4233
   background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь контейнер */
   background-position: cover; /* Центрирует изображение в контейнере */
   width: 100%; /* Устанавливает ширину контейнера */
