@@ -211,6 +211,7 @@ let setAsteroidShape = asteroid => {
   let shape = shapes[Math.floor(Math.random() * shapes.length)];
   asteroid.setAttribute('src', shape);
   asteroid.style.height = `${size}rem`;
+  
   asteroid.style.width = `${size}rem`;
 };
 
