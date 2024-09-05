@@ -350,7 +350,7 @@ body {
   z-index: 100;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  border: 20px solid #1840db;
+  border: 20px dotted #db1818;
   text-align: center;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -378,7 +378,7 @@ body {
   z-index: 100;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  border: 20px solid #db1818;
+  border: 20px dotted #db1818;
   text-align: center;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -387,7 +387,7 @@ body {
 
 .playerTitle {
   padding-top: 1rem;
-  color: #db1818;
+  color: #1840db;
   font-size: 2rem;
   text-decoration: underline;
 }
@@ -574,7 +574,7 @@ body {
 
 .difficulty button {
   padding: 1.5rem 3rem; /* Увеличенные отступы */
-  font-size: 1.5rem; /* Увеличенный размер шрифта */
+  font-size: 2rem; /* Увеличенный размер шрифта */
   cursor: pointer;
   border: none;
   border-radius: 10px; /* Более округлённые углы */
@@ -586,7 +586,7 @@ body {
 
 .difficulty-buttons button {
   padding: 1.5rem 3rem; /* Увеличенные отступы */
-  font-size: 1.5rem; /* Увеличенный размер шрифта */
+  font-size: 2rem; /* Увеличенный размер шрифта */
   cursor: pointer;
   border: none;
   border-radius: 10px; /* Более округлённые углы */
