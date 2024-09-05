@@ -424,7 +424,7 @@ body {
   top: 60%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  color: rgba(48, 42, 206, 0.822);
+  color: #1840db
   font-size: 10rem;
   cursor: pointer;
 }
@@ -434,14 +434,14 @@ body {
   margin-bottom: 1rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  color:  rgba(48, 42, 206, 0.822);
+  color:  #1840db
   font-size: 10rem;
   cursor: pointer;
   font-size: 3rem;
 }
 .playerPlay:hover {
   transition: all 0.5s ease;
-  color:  rgba(48, 42, 206, 0.822);
+  color: #1840db
 }
 
 .playerInput {
