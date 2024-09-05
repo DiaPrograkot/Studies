@@ -427,32 +427,33 @@ let startgameFunc = () => {
 
 
 
-showStars()
-let nameStorage = localStorage.getItem('name')
-console.log(nameStorage)
-if (nameStorage) {
-  playerLabel.textContent = nameStorage
-  const handleKeyDown = (event) => {
-    if (event.target.matches('input')) {
-      console.log('Key pressed in input');
-      return;
-    }
-  };
-  document.addEventListener('keydown', handleKeyDown);
-
- startgameFunc()
-  } else {
-  playerNameContainer.style.display = 'flex'
-  playerPlay.addEventListener('click', () => {
-    playerName = playerInput.value
-    if (playerName) {
-      localStorage.setItem('name', playerName)
-      playerLabel.textContent = playerName
-      playerNameContainer.style.display = 'none'
-      startgameFunc()
-      }
-    })
+const handleKeyDown = (event) => {
+  if (event.target.matches('input')) {
+    return;  // Если фокус на input, игнорируем остальные события
   }
+}
+
+document.addEventListener('keydown', handleKeyDown);
+
+showStars();
+let nameStorage = localStorage.getItem('name');
+console.log(nameStorage);
+if (nameStorage) {
+  playerLabel.textContent = nameStorage;
+  startgameFunc();
+} else {
+  playerNameContainer.style.display = 'flex';
+  playerPlay.addEventListener('click', () => {
+    const playerName = playerInput.value;
+    if (playerName) {
+      localStorage.setItem('name', playerName);
+      playerLabel.textContent = playerName;
+      playerNameContainer.style.display = 'none';
+      startgameFunc();
+    }
+  });
+}
+
 
 
 
