@@ -230,7 +230,10 @@ const handleLaserShotKey = () => {
        })
 };
 
-document.addEventListener('keydown', event => {  
+document.addEventListener('keydown', event => { 
+  if (event.target.matches('input')) {
+    return;
+  } 
   event.preventDefault(); // Это предотвращает стандартное поведение клавиши пробела
   if (event.code === 'ArrowLeft' || event.code === 'KeyA') {  
     moveLeft = true;
@@ -240,7 +243,10 @@ document.addEventListener('keydown', event => {
   } 
 });
 
-document.addEventListener('keyup', event => {  
+document.addEventListener('keyup', event => { 
+  if (event.target.matches('input')) {
+    return;
+  } 
   if (event.code === 'ArrowLeft' || event.code === 'KeyA') {  
     moveLeft = false;
   }  
@@ -427,29 +433,39 @@ let startgameFunc = () => {
 
 
 
-document.addEventListener('keydown', (event) => {
-  if (event.target.tagName.toLowerCase() === 'input') {
-    return;  // Игнорируем события, когда фокус на input
+const handleKeyDown = (event) => {
+  if (event.target.matches('input')) {
+    return;
   }
-});
+  
+};
+
 showStars();
+
 let nameStorage = localStorage.getItem('name');
 console.log(nameStorage);
+
 if (nameStorage) {
   playerLabel.textContent = nameStorage;
   startgameFunc();
 } else {
   playerNameContainer.style.display = 'flex';
+  
+  // Добавляем обработчик нажатия на кнопку "Play"
   playerPlay.addEventListener('click', () => {
-    const playerName = playerInput.value;
+    let playerName = playerInput.value;  
+
     if (playerName) {
-      localStorage.setItem('name', playerName);
-      playerLabel.textContent = playerName;
-      playerNameContainer.style.display = 'none';
-      startgameFunc();
+      localStorage.setItem('name', playerName);  
+      playerLabel.textContent = playerName;      
+      playerNameContainer.style.display = 'none';  
+      startgameFunc();  
     }
   });
 }
+
+
+document.addEventListener('keydown', handleKeyDown);
 
 
 
