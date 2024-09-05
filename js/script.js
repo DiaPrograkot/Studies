@@ -425,9 +425,17 @@ let startgameFunc = () => {
   });
 };
 
+
+
+console.log('Elements initialized:', playerInput, playerPlay, playerNameContainer, playerLabel);
+
+
+// Показ звезд
 showStars();
+
+// Получение сохраненного имени игрока
 let nameStorage = localStorage.getItem('name');
-console.log(nameStorage);
+console.log('Stored name:', nameStorage);
 
 if (nameStorage) {
   playerLabel.textContent = nameStorage;
@@ -436,8 +444,9 @@ if (nameStorage) {
   playerNameContainer.style.display = 'flex';
 
   playerPlay.addEventListener('click', () => {
-    console.log('Button clicked');
+    console.log('Play button clicked');
     let playerName = playerInput.value;
+    console.log('Player input value:', playerName);
     if (playerName) {
       localStorage.setItem('name', playerName);
       playerLabel.textContent = playerName;
@@ -454,6 +463,8 @@ const handleKeyDown = (event) => {
     return;
   }
 };
+
+// Добавление обработчика нажатий клавиш на весь документ
 document.addEventListener('keydown', handleKeyDown);
 
 // Управление музыкой
@@ -495,10 +506,10 @@ document.addEventListener('keydown', (event) => {
 });
 
 const imageContainer = document.querySelector('.imageContainer');
-  const imageUrl = 'img/background26.png'; // Укажи свою ссылку на изображение
+  const imageUrl = 'img/background26.png'; 
 
   const img = document.createElement('img');
   img.src = imageUrl;
  
-  // Добавление изображения в контейнер
+ 
   imageContainer.appendChild(img);
