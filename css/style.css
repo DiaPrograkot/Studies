@@ -452,6 +452,7 @@ body {
   border: none;
   border-radius: 10px;
   text-align: center;
+  pointer-events: auto;
 }
 
 .startgame, .gameover:hover .play {

@@ -427,8 +427,11 @@ let startgameFunc = () => {
 
 
 
-document.removeEventListener('keydown', handleKeyDown); // Отключаем обработчик клавиш для теста
-
+document.addEventListener('keydown', (event) => {
+  if (event.target.tagName.toLowerCase() === 'input') {
+    return;  // Игнорируем события, когда фокус на input
+  }
+});
 showStars();
 let nameStorage = localStorage.getItem('name');
 console.log(nameStorage);
