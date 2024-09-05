@@ -403,7 +403,7 @@ body {
 }
 
 .highscoreContainer, #gameover {
-  padding-top: 1rem;
+  padding-bottom: 2rem;
   color: #1840db;
   display: -webkit-box;
   display: -ms-flexbox;
