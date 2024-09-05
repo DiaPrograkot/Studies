@@ -257,7 +257,7 @@ body {
   position: absolute;
   display: inline-block;
   font-size: 7rem;
-  color: #db1818;
+  color: white;
   top: 20px;
   right: 58px;
 }
@@ -265,7 +265,7 @@ body {
   position: fixed;
   display: inline-block;
   font-size: 5rem;
-  color: #db1818;
+  color: white;
   bottom: 20px;
   right: 58px;
 }
@@ -397,14 +397,14 @@ body {
 
 .title {
   padding-top: 3rem;
-  color: #db1818;
+  color: #1840db;
   font-size: 6rem;
   text-decoration: underline;
 }
 
 .highscoreContainer, #gameover {
   padding-top: 1rem;
-  color: #db1818;
+  color: #1840db;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,7 +424,7 @@ body {
   top: 60%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  color: rgba(190, 60, 60, 0.822);
+  color: rgba(48, 42, 206, 0.822);
   font-size: 10rem;
   cursor: pointer;
 }
@@ -434,21 +434,21 @@ body {
   margin-bottom: 1rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  color: rgba(190, 60, 60, 0.822);
+  color:  rgba(48, 42, 206, 0.822);
   font-size: 10rem;
   cursor: pointer;
   font-size: 3rem;
 }
 .playerPlay:hover {
   transition: all 0.5s ease;
-  color: rgba(255, 2, 2, 0.822);
+  color:  rgba(48, 42, 206, 0.822);
 }
 
 .playerInput {
   margin-top: 2rem;
   font-size: 3rem;
   background-color: rgba(238, 233, 229, 0.845);
-  color: #f52a2a;
+  color: #db1818;
   border: none;
   border-radius: 10px;
   text-align: center;
@@ -503,7 +503,7 @@ body {
   .counter {
     display: inline-block;
     font-size: 5rem;
-    color: #db1818;
+    color: white;
     top: 10px;
     right: 40px;
   }
@@ -581,6 +581,7 @@ body {
   transition: background-color 0.3s;
   min-width: 200px; /* Минимальная ширина кнопки */
   min-height: 60px; /* Минимальная высота кнопки */
+  font-weight: bolder;
 }
 
 .difficulty-buttons button {
@@ -592,6 +593,7 @@ body {
   transition: background-color 0.3s;
   min-width: 200px; /* Минимальная ширина кнопки */
   min-height: 60px; /* Минимальная высота кнопки */
+  font-weight: bolder;
 }
 
 .difficulty .easy { background-color: #4CAF50; color: white; }
@@ -605,11 +607,13 @@ body {
 .difficulty button:hover {
   background-color: #333;
   color: white;
+  font-weight: bolder;
 }
 
 .difficulty-buttons button:hover {
   background-color: #333;
   color: white;
+  font-weight: bolder;
 }
 
 .imageContainer {
