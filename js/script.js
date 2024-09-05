@@ -427,15 +427,7 @@ let startgameFunc = () => {
 
 
 
-const handleKeyDown = (event) => {
-  console.log("Key pressed: ", event.key);  
-  if (event.target.matches('input')) {
-    console.log("Focus is on input, event ignored.");
-    return;
-  }
-};
-
-document.addEventListener('keydown', handleKeyDown);
+document.removeEventListener('keydown', handleKeyDown); // Отключаем обработчик клавиш для теста
 
 showStars();
 let nameStorage = localStorage.getItem('name');
@@ -447,7 +439,6 @@ if (nameStorage) {
   playerNameContainer.style.display = 'flex';
   playerPlay.addEventListener('click', () => {
     const playerName = playerInput.value;
-    console.log("Player name entered: ", playerName);
     if (playerName) {
       localStorage.setItem('name', playerName);
       playerLabel.textContent = playerName;
@@ -456,7 +447,6 @@ if (nameStorage) {
     }
   });
 }
-
 
 
 
