@@ -20,6 +20,7 @@ let startplay = document.querySelector('.startplay');
 let mars = document.querySelector('.marsImg');
 let space = document.querySelector('.spaceImg');
 let lives = document.querySelector('.lives');
+let background = document.querySelector('.imageContainer');
 let star;
 
 let isPaused = false;
@@ -211,7 +212,7 @@ let setAsteroidShape = asteroid => {
   let shape = shapes[Math.floor(Math.random() * shapes.length)];
   asteroid.setAttribute('src', shape);
   asteroid.style.height = `${size}rem`;
-  
+
   asteroid.style.width = `${size}rem`;
 };
 
@@ -424,24 +425,36 @@ let startgameFunc = () => {
   });
 };
 
-showStars()
-let nameStorage = localStorage.getItem('name')
-console.log(nameStorage)
+showStars();
+let nameStorage = localStorage.getItem('name');
+console.log(nameStorage);
+
 if (nameStorage) {
-  playerLabel.textContent = nameStorage
-  startgameFunc()
+  playerLabel.textContent = nameStorage;
+  startgameFunc();
 } else {
-  playerNameContainer.style.display = 'flex'
+  playerNameContainer.style.display = 'flex';
+
   playerPlay.addEventListener('click', () => {
-    playerName = playerInput.value
+    console.log('Button clicked');
+    let playerName = playerInput.value;
     if (playerName) {
-      localStorage.setItem('name', playerName)
-      playerLabel.textContent = playerName
-      playerNameContainer.style.display = 'none'
-     startgameFunc()
+      localStorage.setItem('name', playerName);
+      playerLabel.textContent = playerName;
+      playerNameContainer.style.display = 'none';
+      startgameFunc();
     }
-  })
+  });
 }
+
+// Обработчик для отслеживания нажатий клавиш
+const handleKeyDown = (event) => {
+  if (event.target.matches('input')) {
+    console.log('Key pressed in input');
+    return;
+  }
+};
+document.addEventListener('keydown', handleKeyDown);
 
 // Управление музыкой
 let musicPlay = () => {
@@ -480,3 +493,12 @@ document.addEventListener('keydown', (event) => {
     pauseButton.textContent = isPaused ? '▶' : '||';
   }
 });
+
+const imageContainer = document.querySelector('.imageContainer');
+  const imageUrl = 'img/background26.png'; // Укажи свою ссылку на изображение
+
+  const img = document.createElement('img');
+  img.src = imageUrl;
+ 
+  // Добавление изображения в контейнер
+  imageContainer.appendChild(img);

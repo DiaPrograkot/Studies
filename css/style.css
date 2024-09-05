@@ -617,17 +617,16 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
   overflow: hidden;
+  z-index: -1
 }
 
-.imageContainer {
-  background-image: url('img/background26.png');
-  background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь контейнер */
-  background-position: cover; /* Центрирует изображение в контейнере */
-  width: 100%; /* Устанавливает ширину контейнера */
-  height: 100vh; /* Устанавливает высоту контейнера на 100% от высоты экрана */
-  position: fixed;
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  position: absolute;
 }
+
 
 
