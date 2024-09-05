@@ -427,34 +427,24 @@ let startgameFunc = () => {
 
 
 
-console.log('Elements initialized:', playerInput, playerPlay, playerNameContainer, playerLabel);
-
-
-// Показ звезд
-showStars();
-
-// Получение сохраненного имени игрока
-let nameStorage = localStorage.getItem('name');
-console.log('Stored name:', nameStorage);
-
+showStars()
+let nameStorage = localStorage.getItem('name')
+console.log(nameStorage)
 if (nameStorage) {
-  playerLabel.textContent = nameStorage;
-  startgameFunc();
-} else {
-  playerNameContainer.style.display = 'flex';
-
+  playerLabel.textContent = nameStorage
+ startgameFunc()
+  } else {
+  playerNameContainer.style.display = 'flex'
   playerPlay.addEventListener('click', () => {
-    console.log('Play button clicked');
-    let playerName = playerInput.value;
-    console.log('Player input value:', playerName);
+    playerName = playerInput.value
     if (playerName) {
-      localStorage.setItem('name', playerName);
-      playerLabel.textContent = playerName;
-      playerNameContainer.style.display = 'none';
-      startgameFunc();
-    }
-  });
-}
+      localStorage.setItem('name', playerName)
+      playerLabel.textContent = playerName
+      playerNameContainer.style.display = 'none'
+      startgameFunc()
+      }
+    })
+  }
 
 // Обработчик для отслеживания нажатий клавиш
 const handleKeyDown = (event) => {
