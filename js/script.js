@@ -432,6 +432,14 @@ let nameStorage = localStorage.getItem('name')
 console.log(nameStorage)
 if (nameStorage) {
   playerLabel.textContent = nameStorage
+  const handleKeyDown = (event) => {
+    if (event.target.matches('input')) {
+      console.log('Key pressed in input');
+      return;
+    }
+  };
+  document.addEventListener('keydown', handleKeyDown);
+
  startgameFunc()
   } else {
   playerNameContainer.style.display = 'flex'
@@ -446,16 +454,7 @@ if (nameStorage) {
     })
   }
 
-// Обработчик для отслеживания нажатий клавиш
-const handleKeyDown = (event) => {
-  if (event.target.matches('input')) {
-    console.log('Key pressed in input');
-    return;
-  }
-};
 
-// Добавление обработчика нажатий клавиш на весь документ
-document.addEventListener('keydown', handleKeyDown);
 
 // Управление музыкой
 let musicPlay = () => {
